@@ -1,0 +1,19 @@
+{
+  "name": "donewithit",
+  "version": "1.0.0",
+  "description": "An ecommerce mobile app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrixgotcodes/react_native--courseProject.git"
+  },
+  "author": "Samuel Opoku Asare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hendrixgotcodes/react_native--courseProject/issues"
+  },
+  "homepage": "https://github.com/hendrixgotcodes/react_native--courseProject#readme"
+}
