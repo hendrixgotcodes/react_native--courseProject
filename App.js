@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Button, Alert } from 'react-native';
 
 export default function App() {
 
@@ -9,11 +9,19 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       {/* <Image source={require('./assets/adaptive-icon.png')}/> */}
-      <Image style={styles.image} source={{
-        width: 200,
-        height: 300,
-        uri: "https://picsum.photos/200/300"}} />
-      <Text style={styles.button} >Hello React Native!</Text>
+      
+      <TouchableNativeFeedback>
+        <Image style={styles.image} source={{
+          width: 200,
+          height: 300,
+          uri: "https://picsum.photos/200/300"}} 
+        />
+      </TouchableNativeFeedback>
+
+      {/* <Text style={styles.button} >Hello React Native!</Text> */}
+
+      <Button onPress= {handleBtnOnPress} title="Proceed" />
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -38,3 +46,19 @@ const styles = StyleSheet.create({
     padding: 16
   }
 });
+
+const handleBtnOnPress = ()=>{
+
+  Alert.alert("Title", "message", [
+
+    {
+      text: "Confirm"
+    },
+    {
+      text: "Reject"
+    }
+    
+
+  ])
+
+}
