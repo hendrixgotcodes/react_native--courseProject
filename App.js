@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Button, Alert, Platform, Dimensions } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import WelcomeScreen from './src/WelcomeScreen';
+import ViewImageScreen from './src/components/ViewImageScreen';
 
 export default function App() {
 
@@ -12,29 +13,7 @@ export default function App() {
 
   return (
 
-      // <View style={styles.container}>
-      //   {/* <Image source={require('./assets/adaptive-icon.png')}/> */}
-        
-      //   <TouchableNativeFeedback>
-      //     <Image style={styles.image} source={{
-      //       width: 200,
-      //       height: 300,
-      //       uri: "https://picsum.photos/200/300"}} 
-      //     />
-      //   </TouchableNativeFeedback>
-
-      //   {/* <Text style={styles.button} >Hello React Native!</Text> */}
-
-      //   <Button onPress= {handleBtnOnPress} title="Proceed" />
-
-      // </View>
-
-      <View style={styles.container}>
-
-          <WelcomeScreen />
-
-      </View>
-
+      <ViewImageScreen />
       
    
   );
