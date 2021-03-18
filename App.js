@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, Touchabl
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import WelcomeScreen from './src/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
+import Practice from './src/components/practice';
 
 export default function App() {
 
@@ -13,7 +14,8 @@ export default function App() {
 
   return (
 
-      <ViewImageScreen />
+      // <ViewImageScreen />
+      <Practice />
       
    
   );
