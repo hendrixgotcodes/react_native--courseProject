@@ -6,12 +6,11 @@ import WelcomeScreen from './src/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
 import Practice from './src/components/practice';
 
+import {} from '@expo/vector-icons'
+
 export default function App() {
 
-  // console.log(useDimensions());
-  console.log(useDeviceOrientation());
-  console.log("***********************************************************************************");
-
+ 
   return (
 
       // <ViewImageScreen />

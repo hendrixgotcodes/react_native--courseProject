@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
+import AppText from './AppText';
 
 export default function Practice() {
 
@@ -17,10 +18,11 @@ export default function Practice() {
             </View>
             <View style={styles.object1} ></View> */}
 
-            <Text style={styles.text}>
+            {/* <Text style={styles.text}>
                 I love react app
                 loremProident consectetur proident ea veniam anim aliquip fugiat anim ea consectetur minim ullamco et. Lorem Lorem do enim aliquip ullamco consequat. Officia amet ex quis commodo nulla ullamco ex aliquip et ipsum ullamco laboris.
-            </Text>
+            </Text> */}
+            <AppText>I love react app. But i want to right more text. so here goes more text. oh and more text. please allow me to add more and more text. thank you</AppText>
 
 
         </View>
