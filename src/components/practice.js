@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
 
 export default function Practice() {
 
@@ -7,14 +7,21 @@ export default function Practice() {
 
         <View style={styles.container}>
 
-            <View style={styles.object}>
+
+            {/* <View style={styles.object}>
 
                 <View style={styles.objectChild}>
 
                 </View>
 
             </View>
-            <View style={styles.object1} ></View>
+            <View style={styles.object1} ></View> */}
+
+            <Text style={styles.text}>
+                I love react app
+                loremProident consectetur proident ea veniam anim aliquip fugiat anim ea consectetur minim ullamco et. Lorem Lorem do enim aliquip ullamco consequat. Officia amet ex quis commodo nulla ullamco ex aliquip et ipsum ullamco laboris.
+            </Text>
+
 
         </View>
         
@@ -30,39 +37,47 @@ const styles = StyleSheet.create({
         alignItems: "center"
 
     },
-    object: {
+    // object: {
 
-        backgroundColor: "dodgerblue",
-        width: 100,
-        height: 100,
-        shadowColor: 'grey',
-        borderColor: 'royalblue',
-        borderWidth: 10,
-        borderRadius: 50,
-        borderTopColor: "gold",
-        shadowOpacity: 1,
-        shadowOffset: {width: 10, height: 10},
-        elevation: 40,
-        padding: 15,
+    //     backgroundColor: "dodgerblue",
+    //     width: 100,
+    //     height: 100,
+    //     shadowColor: 'grey',
+    //     borderColor: 'royalblue',
+    //     borderWidth: 10,
+    //     borderRadius: 50,
+    //     borderTopColor: "gold",
+    //     shadowOpacity: 1,
+    //     shadowOffset: {width: 10, height: 10},
+    //     elevation: 40,
+    //     padding: 15,
 
-    },
-    objectChild:{
+    // },
+    // objectChild:{
 
-        width:50,
-        height: 50,
-        backgroundColor: "white",
-        elevation: 20,
-        borderRadius: 25
+    //     width:50,
+    //     height: 50,
+    //     backgroundColor: "white",
+    //     elevation: 20,
+    //     borderRadius: 25
 
-    },
-    object1: {
+    // },
+    // object1: {
 
-        backgroundColor: "orange",
-        marginTop: 10,
-        width: 100,
-        height: 100,
-        borderRadius: 50
+    //     backgroundColor: "orange",
+    //     marginTop: 10,
+    //     width: 100,
+    //     height: 100,
+    //     borderRadius: 50
 
+    // },
+    text: {
+        fontSize: 30,
+        fontStyle: "italic",
+        fontWeight: "bold",
+        color: "tomato",
+        textTransform : "capitalize",
+        textAlign: "center"
     }
 
 })
