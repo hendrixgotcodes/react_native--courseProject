@@ -6,7 +6,8 @@ import WelcomeScreen from './src/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
 import Practice from './src/components/practice';
 
-import {MaterialCommunityIcons} from '@expo/vector-icons'
+import {MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'
+import AppText from './src/components/AppText';
 
 export default function App() {
 
@@ -18,6 +19,9 @@ export default function App() {
       <View style={styles.container}>
 
           <MaterialCommunityIcons name="react" size={100} color="dodgerblue"/>
+          <AppText>
+            I <FontAwesome name="heart" size={18} color="dodgerblue" /> react native!
+          </AppText>
 
 
       </View>
