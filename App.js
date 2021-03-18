@@ -6,7 +6,7 @@ import WelcomeScreen from './src/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
 import Practice from './src/components/practice';
 
-import {} from '@expo/vector-icons'
+import {MaterialCommunityIcons} from '@expo/vector-icons'
 
 export default function App() {
 
@@ -14,7 +14,13 @@ export default function App() {
   return (
 
       // <ViewImageScreen />
-      <Practice />
+      // <Practice />
+      <View style={styles.container}>
+
+          <MaterialCommunityIcons name="react" size={100} color="dodgerblue"/>
+
+
+      </View>
       
    
   );
@@ -51,7 +57,8 @@ const styles = StyleSheet.create({
     container: {
 
         flex:1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: "center"
 
     }
 
