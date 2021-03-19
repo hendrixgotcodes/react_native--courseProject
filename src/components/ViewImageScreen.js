@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Image, SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 
 import colors from '../config/colors';
 
@@ -11,8 +12,9 @@ export default function ViewImageScreen(){
 
             <View style={styles.btnContainer}>
 
-                <View style={styles.btn1} />
-                <View style={styles.btn2} />
+                {/* <View style={styles.btn1} /> */}
+                <MaterialCommunityIcons name="close" size={28} color={colors.white} />
+                <MaterialCommunityIcons name="trash-can-outline" size={28} color={colors.white} />
 
             </View>
 

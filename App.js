@@ -15,13 +15,13 @@ export default function App() {
  
   return (
 
-      // <ViewImageScreen />
+      <ViewImageScreen />
       // <Practice />
-      <SafeAreaView style={styles.container}>
+      // <SafeAreaView style={styles.container}>
 
-          <Card image={require('./assets/others/jacket.jpg')} title="Red jacket for sale!" subTitle="$100" />
+      //     <Card image={require('./assets/others/jacket.jpg')} title="Red jacket for sale!" subTitle="$100" />
 
-      </SafeAreaView>
+      // </SafeAreaView>
       
    
   );
