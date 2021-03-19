@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Button, Alert, Platform, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Alert, Platform, Dimensions } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 import WelcomeScreen from './src/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
 import Practice from './src/components/practice';
 
 import {MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'
-import AppText from './src/components/AppText';
+import Button from './src/components/Button';
 
 export default function App() {
 
@@ -18,10 +18,7 @@ export default function App() {
       // <Practice />
       <View style={styles.container}>
 
-          <MaterialCommunityIcons name="react" size={100} color="dodgerblue"/>
-          <AppText>
-            I <FontAwesome name="heart" size={18} color="dodgerblue" /> react native!
-          </AppText>
+        <Button text="Login" type="primary" />
 
 
       </View>
