@@ -8,6 +8,7 @@ import Practice from './src/components/practice';
 
 import {MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'
 import Button from './src/components/Button';
+import Card from './src/components/Card';
 
 export default function App() {
 
@@ -16,9 +17,11 @@ export default function App() {
 
       // <ViewImageScreen />
       // <Practice />
+      <SafeAreaView style={styles.container}>
 
-          <WelcomeScreen />
+          <Card image={require('./assets/others/jacket.jpg')} title="Red jacket for sale!" subTitle="$100" />
 
+      </SafeAreaView>
       
    
   );
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
 
         flex:1,
         justifyContent: 'center',
-        alignItems: "center"
-
+        alignItems: "center",
+        padding: 15
     }
 
 })

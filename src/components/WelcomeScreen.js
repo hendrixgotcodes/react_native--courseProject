@@ -13,14 +13,14 @@ export default function WelcomeScreen(){
 
     return(
 
-        <ImageBackground style={style.backgroundImage} source={require('../../assets/WelcomeScreen/background.jpg')}>
+        <ImageBackground blurRadius={2} style={style.backgroundImage} source={require('../../assets/WelcomeScreen/background.jpg')}>
 
             <View style={style.logoContainer} >
 
                 <Image style={style.logo} source={require('../../assets/WelcomeScreen/logo-red.png')} />
                 {/* <Text style={style.logoMotto}>Sell what you dont need</Text> */}
                 <AppText>
-                    Sell what you dont need
+                    Sell what you don't need
                 </AppText>
 
             </View>

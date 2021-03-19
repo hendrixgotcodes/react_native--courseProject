@@ -1,5 +1,6 @@
 import React from 'react'
 import { Platform, StyleSheet, Text } from 'react-native'
+import colors from '../config/colors'
 
 function AppText({children}) {
     return (
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
     btn: {
         fontSize: 18,
         fontWeight: "bold",
-        color: "#2b2b2b",
+        color: colors.black,
         textTransform : "capitalize",
         textAlign: "center",
         fontFamily: "Roboto"
