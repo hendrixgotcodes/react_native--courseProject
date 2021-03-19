@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import AppText from './AppText';
+// import AppText from './AppText';
 
 export default function Practice() {
 

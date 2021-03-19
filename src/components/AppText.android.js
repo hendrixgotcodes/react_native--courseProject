@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     btn: {
         fontSize: 18,
         fontWeight: "bold",
-        color: "#919191",
+        color: "#2b2b2b",
         textTransform : "capitalize",
         textAlign: "center",
         fontFamily: "Roboto"

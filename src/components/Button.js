@@ -4,6 +4,8 @@ import colors from '../config/colors';
 
 export default function Button({text, children, type}) {
 
+    console.log("true");
+
     let btnType;
 
     if(type !== null || type !== undefined){
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
         padding: 25,
         fontSize: 18,
         textTransform: 'uppercase',
+        flexDirection: 'row'
 
     },
     primary:{
@@ -50,7 +53,8 @@ const styles = StyleSheet.create({
         color: colors.white,
         textTransform: 'uppercase',
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginRight: 5
     }
 
 })

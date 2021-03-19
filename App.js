@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, TouchableHighlight, TouchableNativeFeedback, Alert, Platform, Dimensions } from 'react-native';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
-import WelcomeScreen from './src/WelcomeScreen';
+import WelcomeScreen from './src/components/WelcomeScreen';
 import ViewImageScreen from './src/components/ViewImageScreen';
 import Practice from './src/components/practice';
 
@@ -16,12 +16,9 @@ export default function App() {
 
       // <ViewImageScreen />
       // <Practice />
-      <View style={styles.container}>
 
-        <Button text="Login" type="primary" />
+          <WelcomeScreen />
 
-
-      </View>
       
    
   );
