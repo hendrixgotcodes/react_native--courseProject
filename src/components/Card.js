@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         display: "flex",
         borderRadius: 10,
         backgroundColor: colors.white,
-        elevation: 5
+        elevation: 5,
+        marginBottom: 30
     },
     image:{
         width: "100%",

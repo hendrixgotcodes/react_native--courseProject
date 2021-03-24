@@ -1,15 +1,13 @@
-import React from 'react'
-import { ImageBackground, StyleSheet, View, Text, Dimensions, Image } from 'react-native'
+import React from 'react';
+import { ImageBackground, StyleSheet, View, Text, Dimensions, Image } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 
-import colors from '../config/colors'
+import colors from '../config/colors';
 import Button from './Button';
 import AppText from './AppText.android';
 
 
 export default function WelcomeScreen(){
-
-    console.log("they exist");
 
     return(
 
@@ -27,10 +25,10 @@ export default function WelcomeScreen(){
 
             <View style={style.btnContainer}>
                     {/* <View style={style.btn1} /> */}
-                    <Button text="Login" type="primary" >
+                    <Button text="Login" type="primary" onPress={()=>{console.log("logged in")}} >
                         <Ionicons name="key-outline" size={18} color="#fff" />
                     </Button>
-                    <Button text="Register" type="Secondary">
+                    <Button text="Register" type="Secondary" onPress={()=>{console.log("registered")}}>
                         <Ionicons name="pencil-outline" size={18} color="#fff" />
                     </Button>
             </View>

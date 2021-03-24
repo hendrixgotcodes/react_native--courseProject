@@ -1,10 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from  'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from  'react-native';
 import colors from '../config/colors';
 
-export default function Button({text, children, type}) {
-
-    console.log("true");
+export default function Button({text, children, type, onPress}) {
 
     let btnType;
 
@@ -19,10 +17,10 @@ export default function Button({text, children, type}) {
 
 
     return (
-        <View style={[styles.default, btnStyle]}>
+        <TouchableOpacity style={[styles.default, btnStyle]} onPress={onPress}>
             <Text style={styles.text}>{text}</Text>
             {children}
-        </View>
+        </TouchableOpacity>
     )
 }
 

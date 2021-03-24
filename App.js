@@ -9,19 +9,23 @@ import Practice from './src/components/practice';
 import {MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'
 import Button from './src/components/Button';
 import Card from './src/components/Card';
+import ListingDetailsScreen from './src/components/ListingDetailsScreen';
 
 export default function App() {
 
- 
   return (
 
-      <ViewImageScreen />
+      // <ViewImageScreen />
+      // <WelcomeScreen />
       // <Practice />
       // <SafeAreaView style={styles.container}>
 
-      //     <Card image={require('./assets/others/jacket.jpg')} title="Red jacket for sale!" subTitle="$100" />
+      //      <Card image={require('./assets/others/jacket.jpg')} title="Red jacket for sale!" subTitle="$100" />
+      //      <Card image={require('./assets/others/couch.jpg')} title="Couch in great condition" subTitle="$900" />
 
-      // </SafeAreaView>
+
+      //  </SafeAreaView>
+      <ListingDetailsScreen imgSrc={require('./assets/others/couch.jpg')} title="Quality couch for sale" subTitle="$50.00" />
       
    
   );

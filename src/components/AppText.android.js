@@ -2,9 +2,9 @@ import React from 'react'
 import { Platform, StyleSheet, Text } from 'react-native'
 import colors from '../config/colors'
 
-function AppText({children}) {
+function AppText({children, extraStyle={}}) {
     return (
-        <Text style ={styles.btn}>
+        <Text style ={[styles.appText, extraStyle]}>
             {children}
         </Text>
     )
@@ -13,7 +13,7 @@ function AppText({children}) {
 
 
 const styles = StyleSheet.create({
-    btn: {
+    appText: {
         fontSize: 18,
         fontWeight: "bold",
         color: colors.black,
