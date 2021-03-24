@@ -10,11 +10,13 @@ export default function ListingDetailsScreen({imgSrc, title, subTitle, optionalC
 
             <Image style={styles.image} source={imgSrc} />
             <View style={styles.textContainer}>
-                <AppText extraStyle={styles.primaryText}>{title}</AppText>
-                <AppText extraStyle={styles.secondaryText}>{subTitle}</AppText>
+                <AppText extraStyle={styles.title}>{title}</AppText>
+                <AppText extraStyle={styles.subTitle}>{subTitle}</AppText>
             </View>
 
-            {optionalComponent !== "" && <optionalComponent /> }
+            <View style={styles.optionalComponentContainer}>
+                {optionalComponent !== "" && optionalComponent }
+            </View>
             
         </View>
     )
@@ -30,14 +32,19 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 10
     },
-    primaryText: {
+    title: {
         textAlign: 'left',
-        fontSize: 20,
+        fontSize: 24,
         marginBottom: 8,
     },
-    secondaryText: {
+    subTitle: {
         color: colors.secondary,
         textAlign: 'left'
+    },
+    optionalComponentContainer:{
+        width: '100%',
+        paddingHorizontal: 10,
+        marginTop: 20
     }
 
 })

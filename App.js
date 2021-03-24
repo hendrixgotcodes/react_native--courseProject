@@ -10,6 +10,7 @@ import {MaterialCommunityIcons, FontAwesome} from '@expo/vector-icons'
 import Button from './src/components/Button';
 import Card from './src/components/Card';
 import ListingDetailsScreen from './src/components/ListingDetailsScreen';
+import ListItem from './src/components/ListItem';
 
 export default function App() {
 
@@ -25,7 +26,9 @@ export default function App() {
 
 
       //  </SafeAreaView>
-      <ListingDetailsScreen imgSrc={require('./assets/others/couch.jpg')} title="Quality couch for sale" subTitle="$50.00" />
+      <ListingDetailsScreen imgSrc={require('./assets/others/couch.jpg')} title="Quality couch for sale" subTitle="$50.00"
+         optionalComponent={<ListItem imgSrc={require('./assets/others/DP.jpg')} title="Samuel Opoku Asare" subTitle="13 listings" />}
+       />
       
    
   );
