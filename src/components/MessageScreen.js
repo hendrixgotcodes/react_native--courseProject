@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, FlatList} from 'react-native';
+import {View, FlatList, StyleSheet} from 'react-native';
 
 import ListItem from './ListItem';
+import ListItemSeperator from './ListItemSeperator';
 import Screen from './Screen';
 
 const messages = [
@@ -21,12 +22,19 @@ const messages = [
 
 export default function MessageScreen() {
     return (
-        <Screen>
+        <Screen extraStyles={styles.container}>
 
             <FlatList data={messages} keyExtractor={message=>message.id.toString()}
-                renderItem={({item})=> <ListItem title={item.name} subTitle={item.message} imgSrc={item.image} />}
+                renderItem={({item})=> <ListItem title={item.name} subTitle={item.message} imgSrc={item.image} onPress={()=>{console.log(item);}} />}
+                ItemSeparatorComponent={ListItemSeperator}
               />
             
         </Screen>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        paddingHorizontal: 15
+    }
+})
