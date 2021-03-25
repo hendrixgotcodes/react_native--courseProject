@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, FlatList, StyleSheet, Text} from 'react-native';
 
 import ListItem from './ListItem';
+import ListItemDeleteAction from './ListItemDeleteAction';
 import ListItemSeperator from './ListItemSeperator';
 import Screen from './Screen';
 
@@ -17,6 +18,28 @@ const messages = [
         name: "Mosh Hamedani",
         message: "Hi",
         image: require('../../assets/others/mosh.jpg')
+    }, {
+        id: 3,
+        name: "Samuel Opoku Asare",
+        message: "Hi",
+        image: require('../../assets/others/DP.jpg')
+    },
+    {
+        id: 4,
+        name: "Mosh Hamedani",
+        message: "Hi",
+        image: require('../../assets/others/mosh.jpg')
+    }, {
+        id: 5,
+        name: "Samuel Opoku Asare",
+        message: "Hi",
+        image: require('../../assets/others/DP.jpg')
+    },
+    {
+        id: 6,
+        name: "Mosh Hamedani",
+        message: "Hi",
+        image: require('../../assets/others/mosh.jpg')
     }
 ]
 
@@ -25,7 +48,14 @@ export default function MessageScreen() {
         <Screen extraStyles={styles.container}>
 
             <FlatList data={messages} keyExtractor={message=>message.id.toString()}
-                renderItem={({item})=> <ListItem title={item.name} subTitle={item.message} imgSrc={item.image} onPress={()=>{console.log(item);}} />}
+                renderItem={
+                    ({item})=> (
+                        <ListItem title={item.name} subTitle={item.message} imgSrc={item.image}
+                            onPress={()=>{console.log(item)}} 
+                            rightAction={()=><ListItemDeleteAction />}
+                         />
+                    )
+                }
                 ItemSeparatorComponent={ListItemSeperator}
               />
             
