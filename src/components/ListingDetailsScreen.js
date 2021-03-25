@@ -1,12 +1,12 @@
 import React from 'react'
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, SafeAreaView, StyleSheet, View} from 'react-native';
 import colors from '../config/colors';
 import AppText from './AppText.android';
 
 export default function ListingDetailsScreen({imgSrc, title, subTitle, optionalComponent=""}) {
 
     return (
-        <View>
+        <SafeAreaView>
 
             <Image style={styles.image} source={imgSrc} />
             <View style={styles.textContainer}>
@@ -18,7 +18,7 @@ export default function ListingDetailsScreen({imgSrc, title, subTitle, optionalC
                 {optionalComponent !== "" && optionalComponent }
             </View>
             
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         width: "100%",
-        padding: 10
+        padding: 10,
+        borderBottomWidth: .8,
+        borderBottomColor: colors.primary
     },
     title: {
         textAlign: 'left',
