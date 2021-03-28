@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, FlatList, StyleSheet, Text} from 'react-native';
 
 import ListItem from './ListItem';
@@ -43,16 +43,28 @@ const messages = [
     }
 ]
 
+
 export default function MessageScreen() {
+
+    const [allMessages, setMessages] = useState(messages)
+
+    const onPressHandler = (item)=>{
+
+        const newMessages = allMessages.filter(m=> m.id !== item.id)
+        setMessages(newMessages)
+
+    }
+
+
     return (
         <Screen extraStyles={styles.container}>
 
-            <FlatList data={messages} keyExtractor={message=>message.id.toString()}
+            <FlatList data={allMessages} keyExtractor={allMessages=>allMessages.id.toString()}
                 renderItem={
                     ({item})=> (
                         <ListItem title={item.name} subTitle={item.message} imgSrc={item.image}
                             onPress={()=>{console.log(item)}} 
-                            rightAction={()=><ListItemDeleteAction />}
+                            rightAction={()=><ListItemDeleteAction onPress={()=>{onPressHandler(item)}} />}
                          />
                     )
                 }
